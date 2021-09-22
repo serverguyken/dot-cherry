@@ -58,7 +58,7 @@ $.switch(eligible, {
 
 # Documentation
 
-**Visit <a href="dot-cherry.com">dotcherry.echodesktechnology.com</a> for docs**
+**Visit <a href="dot-cherry.com">dot-cherry.com</a> for docs**
 
 
 <br>
