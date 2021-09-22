@@ -9,7 +9,7 @@
 
 <p align="center">
 <img alt="Downloads" src="https://img.shields.io/npm/dw/dot-cherry">
-<img alt="NPM" src="https://img.shields.io/npm/l/dot-cherry">
+<img alt="GitHub" src="https://img.shields.io/github/license/serverguyken/dot-cherry">
 </p>
 
 
