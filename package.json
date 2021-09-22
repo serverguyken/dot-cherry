@@ -1,0 +1,16 @@
+{
+  "name": "dot-cherry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "compile": "tsc"
+  },
+  "author": "Kehinde Akinsanya",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
