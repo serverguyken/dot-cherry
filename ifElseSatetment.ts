@@ -1,23 +1,41 @@
 import Program from "./program";
 
-function ifElse(condition: any, callback: Function) {
-    if (!condition) return Program.error("ifElse", "condition is not defined");
-    if (!callback) return Program.error("ifElse", "callback is not defined");
-    if(!condition && !callback) return Program.error("ifElse", "condition and callback are not defined");
-    if (condition) {
-       callback();
-    }
-    const method = {
-        else: (callback: Function) => {
-            console.log(callback);
-            
-            if (!callback) return Program.error("ifElse", "callback is not defined");
-            if (!condition) {
-                callback();
-            }
+// jsdoc documentation for the class IfElseSatetment
+/**
+ * @class statement
+ * @description This class is used to create an if else statement.
+ * @param {string} condition The condition to be checked.
+ * @param {Function} ifStatement The function that will be executed if the condition is true.
+ * @method IfElseSatetment.getCondition
+ * @example 
+ * 
+ * let verified = true;
+ * $.if(verified, () => {
+ *  console.log("verified");
+ * }).else(() => {
+ * console.log("not verified");
+ * });
+ **/
+class statement {
+    condition: any;
+    fn: Function;
+    constructor(condition: any, fn: Function) {
+        this.condition = condition;
+        this.fn = fn;
+        if (typeof condition !== 'boolean') Program.error('statement', 'Expected a boolean')
+        if (typeof fn !== 'function') Program.error('statement', 'Expected a function')
+        if (condition && typeof condition === "boolean" && fn && typeof fn === 'function') {
+            fn();
+        }
+        else {
+            this.else;
         }
     }
-    return method;
+    else(fn: Function) {
+        if (typeof fn !== 'function') Program.error("statement", 'Expected a function for else statement')
+        if (!this.condition && typeof fn === 'function') {
+            fn();
+        }
+    }
 }
-
-export default ifElse;
+export default statement;

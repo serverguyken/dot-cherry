@@ -1,17 +1,17 @@
 import Program from "./program";
-function withUpperCase(_char: string, _designation: number) {
-    if (_designation >= _char.length) {
+function withUpperCase(str: string, _designation: number) {
+    if (_designation >= str.length) {
         return Program.error("withUpperCase",`Cannot convert properties of undefined to upperCase, character is more than the designation index`)
     }
-    let _typeof = typeof _char;
+    let _typeof = typeof str;
     if (_typeof === "string") {
         if (_designation || _designation === 0) {
             // capitalize the letter at the designated index
-            let _charArray = _char.split("");
-            _charArray[_designation] = _charArray[_designation].toUpperCase();
-            return _charArray.join("");
+            let strArray = str.split("");
+            strArray[_designation] = strArray[_designation].toUpperCase();
+            return strArray.join("");
         }
-        return _char.toUpperCase();
+        return str.toUpperCase();
     }
     else {
         return Program.error("withUpperCase",`Cannot convert ${_typeof} to upperCase`)

@@ -1,9 +1,9 @@
 import Program from "./program";
-function withlowerCase(_char: string) {
-    let _typeof = typeof _char;
+function withlowerCase(str: string) {
+    let _typeof = typeof str;
     // }
     if (_typeof === "string") {
-        return _char.toLowerCase();
+        return str.toLowerCase();
     }
     else {
         return Program.error("withLowerCase",`Cannot convert ${_typeof} to lowerCase`)

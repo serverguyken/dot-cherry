@@ -3,16 +3,16 @@ import Program from "./program"
 // jsdoc template
 /**
  * @description Returns true if the value is a vowel.
- * @param {_char} value
+ * @param {str} value
  * @returns {boolean}
  * @example
  * isVowel("egg") // true
  **/
 
-function isVowel(_char: string) {
-    let _typeof = typeof _char;
+function isVowel(str: string) {
+    let _typeof = typeof str;
     if (_typeof === "string") {
-       return  getVowel(_char);
+       return  getVowel(str);
     }
     else {
         return Program.error("isVowel",`Cannot check if ${_typeof} is a vowel`)
@@ -20,8 +20,8 @@ function isVowel(_char: string) {
 };
  
 
-function getVowel(_char: string) {
-    const char = _char.toLowerCase();
+function getVowel(str: string) {
+    const char = str.toLowerCase();
     const getCorV = char.substring(0, 1);
     if (
         getCorV === "a" ||

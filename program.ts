@@ -7,11 +7,15 @@ class Program {
         error = `An error occured performing ${originator} method: ` + message
         throw error
     }
-    show(value: any) {
-        console.log(value)
+    show(...args: any[]) {
+        for (let i = 0; i < args.length; i++) {
+            console.log(args[i])
+        }
     }
-    showWithType(value: any) {
-        console.log(typeof value, "<==>", value)
+    showWithType(...args: any[]) {
+        for (let i = 0; i < args.length; i++) {
+            console.log(typeof args[i], "<==>", args[i])
+        }
     }
 }
 
