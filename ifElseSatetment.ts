@@ -2,11 +2,9 @@ import Program from "./program";
 
 // jsdoc documentation for the class IfElseSatetment
 /**
- * @class statement
- * @description This class is used to create an if else statement.
+ * @category class
  * @param {string} condition The condition to be checked.
  * @param {Function} ifStatement The function that will be executed if the condition is true.
- * @method IfElseSatetment.getCondition
  * @example 
  * 
  * let verified = true;
