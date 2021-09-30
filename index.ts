@@ -42,6 +42,7 @@ class $ {
 }
 
 
+
 function exit(int: number): any {
     // exit 
     if (int === 0) return 0
