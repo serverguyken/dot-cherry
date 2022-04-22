@@ -28,7 +28,7 @@
 
 
 ```js
-import $ from "../.Cherry/lib/";
+import $ from "dot-cherry";
 
 const eligible = true;
 
