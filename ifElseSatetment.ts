@@ -1,10 +1,8 @@
 import Program from "./program";
-
-// jsdoc documentation for the class IfElseSatetment
 /**
- * @category class
+ * @class IfElseSatetment
  * @param {string} condition The condition to be checked.
- * @param {Function} ifStatement The function that will be executed if the condition is true.
+ * @param {Function} fn The function to be executed if the condition is true.
  * @example 
  * 
  * let verified = true;
@@ -14,7 +12,7 @@ import Program from "./program";
  * console.log("not verified");
  * });
  **/
-class statement {
+class Statement {
     condition: any;
     fn: Function;
     constructor(condition: any, fn: Function) {
@@ -36,4 +34,4 @@ class statement {
         }
     }
 }
-export default statement;
+export default Statement;
